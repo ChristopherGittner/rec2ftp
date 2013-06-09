@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rec2Ftp</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="yourhostname">ihrhost</string>
+    <string name="failed_to_upload_file">Fehler beim Hochladen der Datei\nBitte die Fehlerausgabe beachten</string>
+    <string name="no">Nein</string>
+    <string name="yes">Ja</string>
+    <string name="really_abort_question">Wirklich Abbrechen?\nÄnderungen gehen verloren</string>
+    <string name="username">Benutzername</string>
+    <string name="password">Passwort</string>
+    <string name="host">Host</string>
+    <string name="port">Port</string>
+    <string name="directory">Verzeichnis</string>
+    <string name="user_rights">Benutzerrechte</string>
+    <string name="file_prefix">Namenspräfix</string>
+    <string name="append_index">Index\nAnhängen</string>
+    <string name="server">Server</string>
+    <string name="other">Sonstiges</string>
+    <string name="please_enter_data_in_the_server_section">Bitte Daten im Bereich Server eingeben</string>
+    <string name="starting_upload">Starte Upload</string>
+    <string name="failed_to_login">Fehler beim Einloggen\nRichtiger Benutzer / Passwort?</string>
+    <string name="failed_to_set_binary_filetype">Fehler beim Setzen des Binären Dateityps</string>
+    <string name="failed_to_set_working_directory">Fehler beim setzen des Arbeitsverzeichniss</string>
+    <string name="failed_to_set_file_permissions">Fehler beim Setzen der Dateirechte</string>
+    <string name="upload_successfull">Upload Erfolgreich</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="record">Aufnehmen</string>
+    <string name="take_picture">Bild Aufnehmen</string>
+    <string name="record_video">Video Aufnehmen</string>
+    <string name="take_note">Notiz erstellen</string>
+    <string name="record_audio">Tonaufnahme erstellen</string>
+    <string name="video_capture_tweak">Videoaufnahme Tweak</string>
+    <string name="remove_successfull_uploads">Vollständige Uploads Entfernen</string>
+    <string name="autorun">Autostart</string>
+        <string-array name="autorun_selections">
+        <item >Aus</item><item >Bild</item>
+        <item >Video</item>
+        <item >Tonaufnahme</item>
+        <item >Text</item>
+        
+    </string-array>
+    <string-array name="autorun_selections_values">
+        <item >off</item>
+        <item >picture</item>
+        <item >video</item>
+        <item >audio</item>
+        <item >text</item>
+    </string-array>
+    <string name="status">Status</string>
+</resources>

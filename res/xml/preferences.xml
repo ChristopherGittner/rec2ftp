@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <PreferenceCategory android:title="@string/server"><EditTextPreference android:key="pref_host" android:title="@string/host" android:defaultValue="@string/yourhostname" /><EditTextPreference android:key="pref_port" android:title="@string/port" android:numeric="integer" android:maxLength="5" android:defaultValue="21" />
+        <EditTextPreference android:key="pref_username" android:title="@string/username"/>
+        <EditTextPreference android:key="pref_password" android:title="@string/password" android:inputType="textPassword"/>
+	</PreferenceCategory>
+            
+    <PreferenceCategory android:title="@string/other"><EditTextPreference android:key="pref_directory" android:title="@string/directory" /><EditTextPreference android:key="pref_rights" android:title="@string/user_rights" android:numeric="integer" android:maxLength="3" android:defaultValue="" /><EditTextPreference android:key="pref_file_prefix" android:title="@string/file_prefix" /><CheckBoxPreference android:key="pref_append_index" android:title="@string/append_index" />
+    <CheckBoxPreference android:key="pref_remove_successfull_uploads" android:title="@string/remove_successfull_uploads"/><CheckBoxPreference android:key="pref_record_video_tweak" android:title="@string/video_capture_tweak"/>
+    <ListPreference android:key="pref_autorun" android:title="@string/autorun" android:entryValues="@array/autorun_selections_values" android:entries="@array/autorun_selections" android:defaultValue="off"/>
+    
+</PreferenceCategory>
+    
+    
+    
+    
+    
+    
+</PreferenceScreen>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linlayButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center_horizontal"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp" >
+
+        <org.gittner.rec2ftp.views.SquareLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+                    <ImageButton
+                        android:id="@+id/btnPicture"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/take_picture"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_photo" />
+                    </org.gittner.rec2ftp.views.SquareLayout>
+
+        <org.gittner.rec2ftp.views.SquareLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+                            <ImageButton
+                                android:id="@+id/btnVideo"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_weight="1"
+                                android:adjustViewBounds="true"
+                                android:contentDescription="@string/record_video"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_video" />
+
+</org.gittner.rec2ftp.views.SquareLayout>
+
+
+        <org.gittner.rec2ftp.views.SquareLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+                                    <ImageButton
+                                        android:id="@+id/btnAudio"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginRight="4dp"
+                                        android:layout_weight="1"
+                                        android:adjustViewBounds="true"
+                                        android:contentDescription="@string/record_audio"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/ic_sound" />
+
+</org.gittner.rec2ftp.views.SquareLayout>
+
+        <org.gittner.rec2ftp.views.SquareLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/btnText"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/take_note"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_text" />
+
+</org.gittner.rec2ftp.views.SquareLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listvUploads"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_weight="1" >
+
+    </ListView>
+
+</LinearLayout>

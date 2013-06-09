@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rec2Ftp</string>
+    <string name="menu_settings">Settings</string>
+    <string name="yourhostname">yourhostname</string>
+    <string name="failed_to_upload_file">Failed to Upload File\nPlease see Error Log</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="really_abort_question">Really Abort?\nChanges will be lost!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="host">Host</string>
+    <string name="port">Port</string>
+    <string name="directory">Directory</string>
+    <string name="user_rights">User Rights</string>
+    <string name="file_prefix">File Prefix</string>
+    <string name="append_index">Append\nIndex</string>
+    <string name="server">Server</string>
+    <string name="other">Other</string>
+    <string name="please_enter_data_in_the_server_section">Please enter your data in the Server Section</string>
+    <string name="starting_upload">Starting Upload</string>
+    <string name="failed_to_login">Failed to Login\nCorrect Username / Password?</string>
+    <string name="failed_to_set_binary_filetype">Failed to set binary filetype</string>
+    <string name="failed_to_set_working_directory">Failed to set working directory</string>
+    <string name="failed_to_set_file_permissions">Failed to set File Permissions</string>
+    <string name="upload_successfull">Upload Successful</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="record">Record</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="record_video">Record Video</string>
+    <string name="take_note">Take Note</string>
+    <string name="record_audio">Record Audio</string>
+    <string name="video_capture_tweak">Video Capture Tweak</string>
+    <string name="remove_successfull_uploads">Remove Successful Uploads</string>
+    <string name="autorun">Autorun</string>
+    <string-array name="autorun_selections">
+        <item >Off</item>
+        <item >Picture</item>
+        <item >Video</item>
+        <item >Audio</item>
+        <item >Text</item>
+    </string-array>
+    <string-array name="autorun_selections_values">
+	    <item >off</item>
+	    <item >picture</item>
+	    <item >video</item>
+	    <item >audio</item>
+	    <item >text</item>
+    </string-array>
+    <string name="status">Status</string>
+</resources>
