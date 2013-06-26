@@ -33,12 +33,12 @@ public class AudioRecordActivity extends Activity implements OnClickListener{
         tmpFile_ = getIntent().getExtras().getString(EXTRA_OUTPUT);
 
         /* Setup all Buttons */
-        ((ImageButton) findViewById(R.id.btnRecord)).setOnClickListener(this);
-        ((ImageButton) findViewById(R.id.btnStop)).setOnClickListener(this);
-        ((ImageButton) findViewById(R.id.btnStop)).setEnabled(false);
-        ((ImageButton) findViewById(R.id.btnPause)).setOnClickListener(this);
-        ((ImageButton) findViewById(R.id.btnPause)).setEnabled(false);
-        ((ImageButton) findViewById(R.id.btnCancel)).setOnClickListener(this);
+        findViewById(R.id.btnRecord).setOnClickListener(this);
+        findViewById(R.id.btnStop).setOnClickListener(this);
+        findViewById(R.id.btnStop).setEnabled(false);
+        findViewById(R.id.btnPause).setOnClickListener(this);
+        findViewById(R.id.btnPause).setEnabled(false);
+        findViewById(R.id.btnCancel).setOnClickListener(this);
 
         /* Initialize the recorder */
         recorder.reset();
@@ -52,10 +52,10 @@ public class AudioRecordActivity extends Activity implements OnClickListener{
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.btnRecord:
-                ((ImageButton) findViewById(R.id.btnRecord)).setEnabled(false);
+                findViewById(R.id.btnRecord).setEnabled(false);
                 ((ImageButton) findViewById(R.id.btnRecord)).setImageDrawable(getResources().getDrawable(R.drawable.ic_record_active));
-                ((ImageButton) findViewById(R.id.btnCancel)).setEnabled(false);
-                ((ImageButton) findViewById(R.id.btnStop)).setEnabled(true);
+                findViewById(R.id.btnCancel).setEnabled(false);
+                findViewById(R.id.btnStop).setEnabled(true);
 
                 try {
                     recorder.prepare();
@@ -71,8 +71,8 @@ public class AudioRecordActivity extends Activity implements OnClickListener{
                 break;
             case R.id.btnPause:
                 //TODO: Make Pause Button Work
-                ((ImageButton) findViewById(R.id.btnRecord)).setEnabled(true);
-                ((ImageButton) findViewById(R.id.btnCancel)).setEnabled(true);
+                findViewById(R.id.btnRecord).setEnabled(true);
+                findViewById(R.id.btnCancel).setEnabled(true);
 
                 recorder.stop();
                 break;

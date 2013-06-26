@@ -18,10 +18,10 @@ public class SquareLayout extends LinearLayout {
         int width = MeasureSpec.getSize(widthMeasureSpec);
         int height = MeasureSpec.getSize(heightMeasureSpec);
 
-        if (width > (int)(1 * height + 0.5)) {
-            width = (int)(1 * height + 0.5);
+        if (width > (int)(height + 0.5)) {
+            width = (int)(height + 0.5);
         } else {
-            height = (int)(width / 1 + 0.5);
+            height = (int) (width + 0.5);
         }
 
         super.onMeasure(

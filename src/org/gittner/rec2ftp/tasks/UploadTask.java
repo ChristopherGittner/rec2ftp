@@ -26,7 +26,7 @@ class ProgressData {
         ACTION_PROGRESS,
         ACTION_INDETERMINATE,
         ACTION_FILENAME
-    };
+    }
 
     Action action_;
     private String message_;
@@ -92,7 +92,7 @@ class ProgressData {
 
         return "";
     }
-};
+}
 
 public class UploadTask extends AsyncTask<Void, ProgressData, Boolean> {
 

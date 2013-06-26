@@ -49,4 +49,5 @@
         <item >text</item>
     </string-array>
     <string name="status">Status</string>
+    <string name="failed_to_set_temp_file_permissions">Fehler beim setzen der Zugriffsrechte der Temporären Datei</string>
 </resources>

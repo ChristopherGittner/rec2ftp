@@ -31,8 +31,8 @@ public class TextEditActivity extends Activity implements OnClickListener{
         tmpFile_ = new File(getIntent().getExtras().getString(EXTRA_OUTPUT));
 
         /* Setup the Buttons */
-        ((ImageButton) findViewById(R.id.btnOk)).setOnClickListener(this);
-        ((ImageButton) findViewById(R.id.btnCancel)).setOnClickListener(this);
+        findViewById(R.id.btnOk).setOnClickListener(this);
+        findViewById(R.id.btnCancel).setOnClickListener(this);
     }
 
     @Override

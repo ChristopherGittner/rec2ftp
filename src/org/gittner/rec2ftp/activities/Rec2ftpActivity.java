@@ -51,10 +51,10 @@ public class Rec2ftpActivity extends Activity implements OnClickListener, OnItem
         SettingsManager.init(getApplicationContext());
 
         /* Setup the 4 main Buttons */
-        ((ImageButton)findViewById(R.id.btnPicture)).setOnClickListener(this);
-        ((ImageButton)findViewById(R.id.btnVideo)).setOnClickListener(this);
-        ((ImageButton)findViewById(R.id.btnAudio)).setOnClickListener(this);
-        ((ImageButton)findViewById(R.id.btnText)).setOnClickListener(this);
+        findViewById(R.id.btnPicture).setOnClickListener(this);
+        findViewById(R.id.btnVideo).setOnClickListener(this);
+        findViewById(R.id.btnAudio).setOnClickListener(this);
+        findViewById(R.id.btnText).setOnClickListener(this);
 
         logAdapter_ = new LogAdapter(this);
         logAdapter_.setNotifyOnChange(true);
@@ -240,22 +240,27 @@ public class Rec2ftpActivity extends Activity implements OnClickListener, OnItem
             return SettingsManager.getFilePrefix();
     }
 
-    private void createTempFile() {
+    private boolean createTempFile() {
         /* Create a Temporary File for the Camera Intent */
         try {
             tmpFile_ = File.createTempFile("tmp", null);
         } catch (IOException e) {
             Log.e("", e.getMessage());
-            return;
+            return false;
         }
 
         /* The Temporary File needs to be Write and Readable for the Camera Intent */
-        tmpFile_.setWritable(true, false);
-        tmpFile_.setReadable(true, false);
+        if(!tmpFile_.setWritable(true, false) || !tmpFile_.setReadable(true, false)) {
+            Toast.makeText(this, R.string.failed_to_set_temp_file_permissions, Toast.LENGTH_LONG).show();
+            return false;
+        }
+
+        return true;
     }
 
     private void startPictureActivity() {
-        createTempFile();
+        if(!createTempFile())
+            return;
 
         Intent i = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
         i.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, Uri.fromFile(tmpFile_));
@@ -264,7 +269,8 @@ public class Rec2ftpActivity extends Activity implements OnClickListener, OnItem
     }
 
     private void startVideoActivity() {
-        createTempFile();
+        if(!createTempFile())
+            return;
 
         Intent i = new Intent(android.provider.MediaStore.ACTION_VIDEO_CAPTURE);
 
@@ -278,7 +284,8 @@ public class Rec2ftpActivity extends Activity implements OnClickListener, OnItem
     }
 
     private void startAudioActivity() {
-        createTempFile();
+        if(!createTempFile())
+            return;
 
         Intent i = new Intent(this, AudioRecordActivity.class);
         i.putExtra(AudioRecordActivity.EXTRA_OUTPUT, tmpFile_.getAbsolutePath());
@@ -287,7 +294,8 @@ public class Rec2ftpActivity extends Activity implements OnClickListener, OnItem
     }
 
     private void startTextActivity() {
-        createTempFile();
+        if(!createTempFile())
+            return;
 
         Intent i = new Intent(this, TextEditActivity.class);
         i.putExtra(TextEditActivity.EXTRA_OUTPUT, tmpFile_.getAbsolutePath());
